@@ -117,3 +117,12 @@ use the same files (standard library only):
 | 57. Test use in the base recipe's own campaign | at least 15 full passes not counted above: 13 leaderboard reports on the RLinf evaluator, 2 DAgger passes on the AllenAI code | internal record (available on request). |
 | 58. Provenance of the language data | the 5 writing agents received the 40 task instructions and a style guide and read no file; 0 of the 1,509 language test instructions in their prompts or context; 0 of 13,146 non-identity training rows equal one; the style guides written after their author saw the test instructions | internal record (available on request). |
 | 59. Near-test wording in the cleaned file | 1,887 of the 10,684 training rows (17.7 %) within normalised edit distance 0.35 or token Jaccard 0.50 of a language test instruction (identity rows exempt); 786 of 1,537 language cases (51 %) with such a neighbour | internal record (available on request). |
+
+## Where the gain comes from (Table: Where the gain comes from)
+
+| Claim | Value | How to check |
+|---|---|---|
+| Base π0.5 with the file-name text removed from its prompts, against base π0.5 | seven-axis mean +1.07 pt; camera +4.94 pt | `python3 results/recompute.py --pair pi05-libero-strip pi05-libero` (point estimates; the paper's intervals from the 40 tasks are an internal record) |
+| Base π0.5 on the main model's prompts, against base π0.5 with the text removed | seven-axis mean +1.29 pt; language +9.30 pt | `python3 results/recompute.py --pair pi05-libero-mapped pi05-libero-strip` |
+| The main model against base π0.5, both on identical prompts | seven-axis mean +5.16 pt; robot start +17.42 pt; camera +13.13 pt; language +0.20 pt | `python3 results/recompute.py --pair main-model pi05-libero-mapped` |
+| The three steps add up to the headline | +1.07 + 1.29 + 5.16 = +7.52 pt | `python3 results/recompute.py --pair main-model pi05-libero` |

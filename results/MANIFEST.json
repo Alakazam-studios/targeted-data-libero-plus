@@ -389,6 +389,32 @@
    "protocol_id": "de6b4b0d531ed9c28c516270e27fb4266e536b580017fc6f76e716cb1283cc34",
    "protocol": "FLUX-3 protocol: FLUX-3 Action's own evaluator settings",
    "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
+  },
+  {
+   "file": "pi05-libero-strip.jsonl.gz",
+   "model": "base pi0.5, its prompts with the file-name text removed",
+   "pass_index": 0,
+   "weights_sha256": "8a240bac16cdc5c34168159bee284a40f9cf774bf01bbd0c406d87c43c4bce0b",
+   "cases": 10030,
+   "rows_sha256_uncompressed": "00981c5120b80b6a58e98071011eb503895a8095795602b76edcee397cec1198",
+   "file_sha256": "92906bad2eecd10bce4d930eb90a3ff6c872b5b655f4b24692ffdabdf907fb95",
+   "seven_axis_mean_pct": 86.7818,
+   "protocol_id": "ee3f0803c23b1ab86ab8f8e76e6e582d6a37d7d1bd8a42eb4524e2a66ef7210e",
+   "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; prompts with the benchmark's file-name text removed",
+   "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
+  },
+  {
+   "file": "pi05-libero-mapped.jsonl.gz",
+   "model": "base pi0.5 on the prompts that the main model acts on",
+   "pass_index": 0,
+   "weights_sha256": "8a240bac16cdc5c34168159bee284a40f9cf774bf01bbd0c406d87c43c4bce0b",
+   "cases": 10030,
+   "rows_sha256_uncompressed": "81abb77a9fd56d464db7fa9cb73c1e419d16c04879276f43c4cc0b4a28d25792",
+   "file_sha256": "607ba31dadfd5098af47cb011cf0ec76d1ba69b03bd5d99b8c282fe7f957bd08",
+   "seven_axis_mean_pct": 88.0748,
+   "protocol_id": "ee3f0803c23b1ab86ab8f8e76e6e582d6a37d7d1bd8a42eb4524e2a66ef7210e",
+   "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; on every case, the prompt that the main model acts on",
+   "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
   }
  ]
 }

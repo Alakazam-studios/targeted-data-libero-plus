@@ -6,7 +6,7 @@ This repository lets you check every score in the paper and re-run its two metho
 
 - `CLAIMS.md`: every number of the paper, with the public evidence for it or a note that it is an internal record.
 - `results/`: the outcome of every LIBERO-Plus case (10,030 cases, one trial each) for each evaluation pass that the
-  paper reports, 29 passes of 28 models. Every score, interval and paired difference in the paper follows from these
+  paper reports, 31 passes of 28 weight files (two of them run base π0.5 with changed prompts). Every score, interval and paired difference in the paper follows from these
   files.
 - `camera-render/`: the camera re-render generator: the camera sampler, the camera transform that matches the
   benchmark's camera code, and the render driver.
