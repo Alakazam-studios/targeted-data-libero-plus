@@ -121,6 +121,7 @@ use the same files (standard library only):
 | 61. Style-guide example phrases in test instructions | three phrases; 22 of 1,537 language cases share that wording; 10 of them changed from failure to success with mxri-lg-2's language stage, at most 0.09 pt of the seven-axis mean | `results/run-b-nolang.jsonl.gz` and `results/run-b-control.jsonl.gz` give the outcomes; the phrase list: internal record (available on request). |
 | 62. Recovery start states that match a test case's object placement | 154 of the 6,441 logged successful recovery episodes (2.4 %); 0.53 % of mxri-lg-1's training frames, all from the return phase; effect not measured | internal record (available on request): the generation receipts and a benchmark pass's start-state receipts. |
 | 63. Recovery-clip generation | 6,480 episodes from three seeds of 2,000 starts (1,910, 1,904 and 1,901 successes, 95 %) and a fourth seed that stopped early | internal record (available on request). |
+| 64. Highest LIBERO-Plus score reported (as of 2026-10-12) | main model 93.23 % seven-axis mean, 93.09 % total; best AllenAI leaderboard entry 92.4 % (RoboHarness); best other fine-tuned model 92.0 % (ZimaBlue); three camera-stage seeds 93.23, 93.23 and 93.42 % | `python3 results/recompute.py` (rows `main-model`, `main-model-seed2`, `main-model-seed3`); the other scores are each paper's own (the paper's Table XIII names them). Each paper uses its own evaluator: an order of reported scores, not a controlled comparison. |
 
 ## Where the gain comes from (Table: Where the gain comes from)
 
