@@ -1,0 +1,54 @@
+{
+ "drawn_share": {
+  "bank": 0.3300000112808844,
+  "clips": 0.2245334015118675,
+  "plus": 0.4454665872072481
+ },
+ "exclusion": {
+  "bank_frames": 270685,
+  "count": 125079,
+  "exclusion_npy_sha256": "553896fb240d195f53e42bdaf3f14eafba3e34754f110a47c76b23fdbcef522b",
+  "ready_sha256": "1c5543b2a091aa5494c749394fa7e554c09c5a45ad3d795cc23912086b6e8266",
+  "receipt_sha256": "c5203681aef9cc32091034bf71f53cbf5b81bee6f76577132dbcf91eb09925c6",
+  "rule": "pre-registered exclusion rule, amendment 2"
+ },
+ "frames": {
+  "bank": 142579,
+  "clips": 632000,
+  "plus": 2182726
+ },
+ "frames_basis": "EFFECTIVE training frames from hooks/build_mix.py --weights-only --split <the validation split> (sha256 9d70d969...), computed 2026-10-01 from meta files only: the base mix's meta (its first 40,267 episodes), the moved-camera training bank's meta, and the exclusion input (exclusion.npy sha256 553896fb...). Plus 2,238,036 - 55,310 held out; clips 648,000 - 160 sources x 25 frames x 4 copies; bank 270,685 - 125,079 excluded - 3,027 kept frames of the 35 bank episodes (5,696 frames) that re-render held-out demos.",
+ "frames_detail": {
+  "bank_excluded": 125079,
+  "bank_kept": 145606,
+  "bank_kept_and_held_out": 3027,
+  "built": {
+   "bank": 270685,
+   "clips": 648000,
+   "plus": 2238036
+  },
+  "held_out": {
+   "bank": 5696,
+   "bank_episodes": 35,
+   "clips": 16000,
+   "plus": 55310
+  }
+ },
+ "sampling": {
+  "bank": 11.340767587355497,
+  "clips": 1.740796280356563,
+  "plus": 1.0
+ },
+ "share": 0.33,
+ "split_sha256": "9d70d96964eac6cdd22836caa35b4129e9ca83ab18351b852d4193f66e2a6ee3",
+ "steer_back": {
+  "drawn_share": 0.07361923552286638,
+  "floor": 0.07361793130785617
+ },
+ "target_share": {
+  "bank": 0.33,
+  "clips": 0.22453340040913397,
+  "plus": 0.44546659959086604
+ },
+ "tool": "hooks/build_mix.py --weights-only; recomputed on the final training bank, unchanged"
+}

@@ -1,0 +1,19 @@
+targeted-data-libero-plus
+Copyright 2026 Alakazam
+
+This repository holds the code and per-case results of the paper "Find the Missing Skill, Build the Data: Targeted
+Data Sets for pi0.5 on LIBERO-Plus". Its code is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party works that this code uses, none of which is redistributed here:
+
+- LIBERO-Plus (benchmark, simulator fork at commit 4976dc30, assets): camera-render/cameras/transform.py reimplements
+  the camera transform of the fork's problem classes from their documented behaviour and copies no code from it; the
+  fork has no licence file. The base camera poses in that file are numeric values read from the fork. The case names,
+  factors and levels in results/ identify the benchmark's test cases. To run the render code you need your own copy
+  of the fork and its assets, from their source.
+- LIBERO (demonstrations: Apache-2.0 on their card; code: MIT).
+- openpi (Physical Intelligence, Apache-2.0) and RLinf (Apache-2.0): the encoder-stage hooks in encoder-stage/hooks/ plug into a
+  trainer built on them; neither is included.
+
+The weights of the paper's main model are not in this repository. They are a Model Derivative of Gemma and will be
+released separately. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms
