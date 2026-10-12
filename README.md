@@ -10,6 +10,8 @@ This repository lets you check every score in the paper and re-run its two metho
   files.
 - `camera-render/`: the camera re-render generator: the camera sampler, the camera transform that matches the
   benchmark's camera code, and the render driver.
+- `language/`: the distance of each language test case to the training pairs, the main model's decoded prompts, and
+  the cleaned instruction file of the later runs.
 - `encoder-stage/`: the training configuration of the encoder stage: the LoRA hook on the SigLIP MLPs, the data-mix
   hook, and the sampling weights of the main model.
 
@@ -29,6 +31,12 @@ camera-render/
   README.md
   cameras/              transform.py, spec.py, sample.py, test_cameras.py, testset.json
   pairs/driver.py       the render driver
+language/
+  README.md             the files and their checks
+  distance.py           the distance to the nearest training pair, and the bands
+  case-distances.jsonl  per language case: distance and band
+  decoded-prompts.jsonl per case of the main model's pass: decoded task instruction
+  cleaned-train.jsonl, cleaned-val.jsonl   the cleaned instruction file
 encoder-stage/
   README.md             the stage's settings
   hooks/                encoder_lora.py, build_mix.py, encft_metrics.py
