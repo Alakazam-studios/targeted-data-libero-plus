@@ -15,7 +15,7 @@ This repository lets you check every score in the paper and re-run its two metho
 - `encoder-stage/`: the training configuration of the encoder stage: the LoRA hook on the SigLIP MLPs, the data-mix
   hook, and the sampling weights of the main model.
 
-The weights of the main model: link to follow (Hugging Face, under the Gemma Terms of Use).
+The weights of the main model: https://huggingface.co/alakazamworld/pi05-libero-plus-targeted (under the Gemma Terms of Use).
 
 ## Layout
 
