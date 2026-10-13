@@ -14,6 +14,10 @@ Third-party works that this code uses, none of which is redistributed here:
 - LIBERO (demonstrations: Apache-2.0 on their card; code: MIT).
 - openpi (Physical Intelligence, Apache-2.0) and RLinf (Apache-2.0): the encoder-stage hooks in encoder-stage/hooks/ plug into a
   trainer built on them; neither is included.
+- FLUX-3 Action (Black Forest Labs, black-forest-labs/flux-3-action-base at revision 62878e29, FLUX Kommunity
+  License v1.0): results/flux3-plus-only and results/flux3-mix hold the per-case success flags of two fine-tunes of
+  it, which we fine-tuned and evaluated for non-commercial research only. No FLUX-3 weights, fine-tunes or other
+  outputs are in this repository. Black Forest Labs does not endorse this work.
 
 The weights of the paper's main model are not in this repository. They are a Model Derivative of Gemma and will be
 released separately. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms
