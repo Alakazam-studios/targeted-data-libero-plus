@@ -1,13 +1,14 @@
 # Find the Missing Skill, Build the Data: Targeted Data Sets for π0.5 on LIBERO-Plus
 
-Code and per-case results for the paper of that title. Paper: arXiv link to follow.
+Code and per-case results for the paper of that title. Paper: [`paper/paper.pdf`](paper/paper.pdf) (the current
+version; the arXiv submission is in moderation, link to follow).
 
 Our main system is the leaderboard system: mxri-va, π0.5 fine-tuned on the LIBERO-Plus demonstrations, our recovery
 clips and a camera stage (no language stage), behind an open test-time rewriter (GPT-6-astra) that rewrites each
 instruction before the policy acts. It scores 93.42 % [93.03, 93.82] seven-axis mean on LIBERO-Plus, the mean of two
 passes, with its 95 % interval over the 10,030 cases; +7.71 [5.82, 9.75] points over base pi0.5, with its interval from
 the 40 tasks. The rewriter's prompt holds the word list and phrase templates of the
-40 training instructions, never the 40 task instructions.
+40 training instructions, but neither the 40 task instructions nor a mapping onto them.
 
 The main weights are those of mxri-va: https://huggingface.co/alakazamworld/pi05-libero-plus-targeted (under the Gemma
 Terms of Use), at the root of that repository. The same repository keeps mxri-lg-va-1, the closed-set model of the
