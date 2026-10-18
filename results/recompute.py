@@ -1,7 +1,7 @@
 # ABOUTME: Recomputes the paper's scores from the per-case files in this folder: each model's 7 axis rates and 7-axis
 # ABOUTME: mean, and with --pair A B the paired difference A - B per axis with its paired SE and a z = 1.96 verdict.
 """python3 results/recompute.py                       every file in MANIFEST.json: axis rates and 7-axis mean (%)
-python3 results/recompute.py --pair main-model pi05-libero    paired difference, main model minus base pi0.5
+python3 results/recompute.py --pair main-model pi05-libero    paired difference, mxri-lg-va-1 minus base pi0.5
 
 Standard library only. Units: pt = percentage points of the axis's cases that succeeded. The 7-axis mean is the
 unweighted mean of the 7 axis rates. A pair (A, B) on one axis of n cases: a_only = cases A succeeded and B failed,

@@ -1,12 +1,13 @@
 # Language data and checks
 
-Files for Section VIII of the paper (Skill: Language) and its distance bands table.
+Files for Section VIII of the paper (Skill: Language), its distance bands table, and the open rewriter of the leaderboard system.
 
 | File | What it holds |
 |---|---|
 | `distance.py` | the paper's distance from a language test instruction to its nearest training pair, and the bands (its header defines the distance exactly) |
 | `case-distances.jsonl` | `distance.py`'s output for the 1,537 language cases: `case_id`, `distance`, `band` |
-| `decoded-prompts.jsonl` | the main model's pass, one row per case (10,030): `case_id`, `decoded` (the task instruction its language stage decoded, or null when the decode is not one of the 40), `own_task` (true when it is the case's own task instruction) |
+| `decoded-prompts.jsonl` | the pass of mxri-lg-va-1 (the closed-set model, the main model of the paper's first version), one row per case (10,030): `case_id`, `decoded` (the task instruction its language stage decoded, or null when the decode is not one of the 40), `own_task` (true when it is the case's own task instruction) |
+| `rewriter/` | the open rewriter of the leaderboard system: its rulebook, its exact system prompt, and the GPT-6-astra and Qwen3.5-9B rewrite tables that the passes read, with their sha256 (`rewriter/README.md`) |
 | `cleaned-train.jsonl`, `cleaned-val.jsonl` | the cleaned instruction file of the later runs: 10,684 training rows (10,284 rewordings and 400 identity rows) and the validation rows, as `instruction`, `task`, `suite`, `source` |
 
 ## Checks

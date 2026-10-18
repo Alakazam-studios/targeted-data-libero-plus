@@ -1,10 +1,10 @@
-# Encoder stage: training configuration of the main model
+# Encoder stage: training configuration of the camera stage of mxri-lg-va-1 and mxri-va
 
 The stage that adapts the vision encoder to the rendered camera views. It starts from a π0.5 checkpoint fine-tuned on
 the base recipe (run A in the paper), freezes every weight, and trains a low-rank adapter on the MLPs of the SigLIP
 vision encoder for 2,000 steps on a mix of the LIBERO-Plus training set, recovery clips and the rendered views.
 
-The hooks are copied from our internal work repository, at the version that trained the main model. For this release
+The hooks are copied from our internal work repository, at the version that trained mxri-lg-va-1. For this release
 only their comments, docstrings and messages were edited, and the two descriptive strings that `build_mix.py` writes
 into its receipt (`rule`, `known_difference_ruling`); the code is otherwise unchanged. The first sha256 is the one
 the training run's specification pins (the files as trained; an internal record), the second the released file's:
@@ -18,7 +18,7 @@ the training run's specification pins (the files as trained; an internal record)
 `encft-fladisj.sampling.json` holds the sampling weights of the three sources on the effective training frames and
 the frame counts they come from.
 
-## Settings of the main model's run
+## Settings of mxri-lg-va-1's run
 
 | setting | value |
 |---|---|
@@ -30,5 +30,9 @@ the frame counts they come from.
 | drawn share | LIBERO-Plus 0.4455, recovery clips 0.2245, rendered views 0.33 |
 | trainer override | `actor.fsdp_config.use_orig_params=true` |
 | validation split | one held-out split file (sha256 `9d70d969...`), validation loss logged per data group |
+
+mxri-va, the policy of the leaderboard system, ran the same stage with the same data and settings, started from
+mxri-2 (run B before its language stage, weights sha256 prefix `6bc90f19`) instead of run A; its run record is internal
+(available on request).
 
 The trainer and its data pipeline are not part of this release; the hooks show what the stage changes in it.

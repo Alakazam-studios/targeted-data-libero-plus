@@ -106,7 +106,7 @@
   },
   {
    "file": "main-model.jsonl.gz",
-   "model": "main model (encoder adapter stage with rendered views)",
+   "model": "mxri-lg-va-1, the closed-set model (encoder adapter stage with rendered views)",
    "pass_index": 0,
    "weights_sha256": "f32a5737d9240a9c8a6eebae668ebe02401037daaa504a45fe1cc2e3812b51f2",
    "cases": 10030,
@@ -119,7 +119,7 @@
   },
   {
    "file": "main-model-noviews.jsonl.gz",
-   "model": "main model without the views",
+   "model": "mxri-lg-va-1 without the views",
    "pass_index": 0,
    "weights_sha256": "7264b6d5b91a0f67fac5942a1c7e67ab63323e08b7d65549de5dddc3946a81bd",
    "cases": 10030,
@@ -236,7 +236,7 @@
   },
   {
    "file": "main-model-seed2.jsonl.gz",
-   "model": "main model's camera stage, training seed 2 (mxri-lg-va-2)",
+   "model": "mxri-lg-va-1's camera stage, training seed 2 (mxri-lg-va-2)",
    "pass_index": 0,
    "weights_sha256": "9488ff9c374fd142451440b63face7d4b82d0f94f009940f71be5a2411234e36",
    "cases": 10030,
@@ -262,7 +262,7 @@
   },
   {
    "file": "main-model-seed3.jsonl.gz",
-   "model": "main model's camera stage, training seed 3 (mxri-lg-va-3)",
+   "model": "mxri-lg-va-1's camera stage, training seed 3 (mxri-lg-va-3)",
    "pass_index": 0,
    "weights_sha256": "2a0ef72fe9de43c504f510686bafbd2c9b3add1d039b1d0dd3f6a12df163a6a3",
    "cases": 10030,
@@ -275,7 +275,7 @@
   },
   {
    "file": "cross-view-adapter.jsonl.gz",
-   "model": "main model's adapter stage plus a cross-view loss (mxri-lg-vacv)",
+   "model": "mxri-lg-va-1's adapter stage plus a cross-view loss (mxri-lg-vacv)",
    "pass_index": 0,
    "weights_sha256": "70f58a005cb1920d436ac4eda337b6031d32aa5c464063485d206b75391aabd7",
    "cases": 10030,
@@ -405,7 +405,7 @@
   },
   {
    "file": "pi05-libero-mapped.jsonl.gz",
-   "model": "base pi0.5 on the prompts that the main model acts on",
+   "model": "base pi0.5 on the prompts that mxri-lg-va-1 acts on",
    "pass_index": 0,
    "weights_sha256": "8a240bac16cdc5c34168159bee284a40f9cf774bf01bbd0c406d87c43c4bce0b",
    "cases": 10030,
@@ -413,7 +413,46 @@
    "file_sha256": "607ba31dadfd5098af47cb011cf0ec76d1ba69b03bd5d99b8c282fe7f957bd08",
    "seven_axis_mean_pct": 88.0748,
    "protocol_id": "ee3f0803c23b1ab86ab8f8e76e6e582d6a37d7d1bd8a42eb4524e2a66ef7210e",
-   "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; on every case, the prompt that the main model acts on",
+   "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; on every case, the prompt that mxri-lg-va-1 acts on",
+   "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
+  },
+  {
+   "file": "mxri-va-gpt-pass0.jsonl.gz",
+   "model": "mxri-va behind the GPT-6-astra rewriter (the leaderboard system), pass 0",
+   "pass_index": 0,
+   "weights_sha256": "6ac6926ecea3350f0dbabdee6f4041a766123d2039770383c00c3172e9d2d8cb",
+   "cases": 10030,
+   "rows_sha256_uncompressed": "c8c92dd48f55e9b090dd51502a8048e51230020c83d7fb3c60632179d33e87c5",
+   "file_sha256": "6483a4b0ae6b73870ad63419f067cbe46036b61b062a3866f825af2ccd33a227",
+   "seven_axis_mean_pct": 93.5139,
+   "protocol_id": "ee3f0803c23b1ab86ab8f8e76e6e582d6a37d7d1bd8a42eb4524e2a66ef7210e",
+   "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; on every case, the GPT-6-astra rewrite of the instruction as shipped (language/rewriter/, table sha256 054af642), the language stage off (mxri-va has none)",
+   "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
+  },
+  {
+   "file": "mxri-va-gpt-pass1.jsonl.gz",
+   "model": "mxri-va behind the GPT-6-astra rewriter (the leaderboard system), pass 1",
+   "pass_index": 1,
+   "weights_sha256": "6ac6926ecea3350f0dbabdee6f4041a766123d2039770383c00c3172e9d2d8cb",
+   "cases": 10030,
+   "rows_sha256_uncompressed": "cbd7eef661856a209d686a2ce1f8ddd6d6c759b01f33e722c6a3e56ae5b233cd",
+   "file_sha256": "14ff618e11f8a8290cc1650a76598982bddaf42ccbd52ce309e1300e2525ce34",
+   "seven_axis_mean_pct": 93.3302,
+   "protocol_id": "ee3f0803c23b1ab86ab8f8e76e6e582d6a37d7d1bd8a42eb4524e2a66ef7210e",
+   "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; on every case, the GPT-6-astra rewrite of the instruction as shipped (language/rewriter/, table sha256 054af642), the language stage off (mxri-va has none)",
+   "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
+  },
+  {
+   "file": "mxri-va-qwen.jsonl.gz",
+   "model": "mxri-va behind the Qwen3.5-9B rewriter, pass 0",
+   "pass_index": 0,
+   "weights_sha256": "6ac6926ecea3350f0dbabdee6f4041a766123d2039770383c00c3172e9d2d8cb",
+   "cases": 10030,
+   "rows_sha256_uncompressed": "f7a2955b98e715bc4d096f22919fc026d09d0fd3588f5a7c87507de2a578f44e",
+   "file_sha256": "9d5af3296ccbd6d96a38951d369d6a5711880d180017b433e9ec30898903538e",
+   "seven_axis_mean_pct": 92.9137,
+   "protocol_id": "ee3f0803c23b1ab86ab8f8e76e6e582d6a37d7d1bd8a42eb4524e2a66ef7210e",
+   "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; on every case, the Qwen3.5-9B rewrite of the instruction as shipped (language/rewriter/, table sha256 4105210e), the language stage off (mxri-va has none)",
    "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
   }
  ]

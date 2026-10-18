@@ -19,5 +19,14 @@ Third-party works that this code uses, none of which is redistributed here:
   it, which we fine-tuned and evaluated for non-commercial research only. No FLUX-3 weights, fine-tunes or other
   outputs are in this repository. Black Forest Labs does not endorse this work.
 
-The weights of the paper's main model are not in this repository. They are a Model Derivative of Gemma and will be
-released separately. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms
+Model outputs in this repository, released with the results under Apache-2.0:
+
+- language/rewriter/table-gpt.json holds outputs of OpenAI's GPT-6-astra, and table-qwen.json outputs of Qwen3.5-9B
+  (Qwen/Qwen3.5-9B at revision c2022362, Apache-2.0 on its model card). Neither model is included. Each table
+  rewrites the LIBERO-Plus instruction of every test case. The rewrites of the 1,537 language cases are derived from
+  the benchmark's language test instructions, for which we found no licence; those instructions themselves are not
+  in this repository, as for language/decoded-prompts.jsonl. On the other 8,493 cases, 8,473 GPT rewrites and 7,978
+  Qwen rewrites equal the case's LIBERO task instruction (LIBERO: MIT code, Apache-2.0 demonstrations).
+
+The model weights are not in this repository. Those of mxri-va (the main weights) and of mxri-lg-va-1 are a Model
+Derivative of Gemma and are released separately, at huggingface.co/alakazamworld/pi05-libero-plus-targeted. Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms
