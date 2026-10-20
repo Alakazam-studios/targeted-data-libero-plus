@@ -135,7 +135,23 @@ use the same files (standard library only):
 | 73. The rewrites outside the language factor, and on held-out paraphrases | of the 8,493 cases outside the language factor, the rewrite equals the case's own task instruction for 8,473 (99.76 %, GPT) and 7,978 (93.94 %, Qwen); on 860 held-out paraphrases judged by Claude Sonnet 5.5, task kept 99.5 % (GPT) and 87.6 % (Qwen) | the first: the command in `language/rewriter/README.md`, Checks; the held-out set and its judgments: internal record (available on request). |
 | 74. Above every LIBERO-Plus score that other work reports (as of 2026-10-17) | the leaderboard system 93.42 % (mean of two passes), 1.02 pt above the best other score; its two passes 1.11 and 0.93 pt above; its interval over the cases [93.03, 93.82]; the other papers give no interval; best AllenAI leaderboard entry 92.4 % (RoboHarness, a test-time system); best other fine-tuned model 92.0 % (ZimaBlue); five passes of our closed-set models score up to 94.04 % and are not used for the order | rows 68 and 64; the other scores are each paper's own. Each paper uses its own evaluator: an order of reported scores, not a controlled comparison. The leaderboard system trains on the benchmark's data and calls a language model at test time, so it is fine-tuned and test-time, not zero-shot. |
 
-## Where the gain comes from (Table: Where the gain comes from)
+## Where the gain comes from (Table: Where the gain of the leaderboard system comes from)
+
+The four steps from base π0.5 to the leaderboard system. Each value is the paired difference on the seven-axis mean
+(the factor named after it in brackets); the paper's intervals from the 40 tasks are an internal record.
+
+| Claim | Value | How to check |
+|---|---|---|
+| The benchmark's training set, on the raw prompts | seven-axis mean +2.23 pt; camera +10.82 pt | `python3 results/recompute.py --pair noclips-nolang pi05-libero` |
+| Our recovery clips (our fine-tune, mxri-2) | seven-axis mean +1.67 pt; robot start +16.90 pt; camera −4.13 pt | `python3 results/recompute.py --pair run-b-nolang noclips-nolang` |
+| The vocabulary-guided rewriter, on our fine-tune | seven-axis mean +2.56 pt; language +10.15 pt | `python3 results/recompute.py --pair mxri-2-gpt run-b-nolang` |
+| The camera stage, under the rewriter | seven-axis mean +1.25 pt (mean of the two passes, +1.34 and +1.16); camera +6.04 pt | `python3 results/recompute.py --pair mxri-va-gpt-pass0 mxri-2-gpt` and `--pair mxri-va-gpt-pass1 mxri-2-gpt`, line 7-axis mean; the mean of the two |
+| The four steps add up to the headline | +2.23 + 1.67 + 2.56 + 1.25 = +7.71 pt | `python3 results/recompute.py --pair mxri-va-gpt-pass0 pi05-libero` and `--pair mxri-va-gpt-pass1 pi05-libero`; the mean of the two |
+| Our training on identical prompts: the leaderboard system against base π0.5 behind the same rewriter | seven-axis mean +5.19 pt [3.77, 6.75] (mean of the two passes, +5.29 and +5.10; interval from the 40 tasks) | `python3 results/recompute.py --pair mxri-va-gpt-pass0 pi05-libero-gpt` and `--pair mxri-va-gpt-pass1 pi05-libero-gpt`; the mean of the two. The interval: internal record (available on request). |
+| Base π0.5 behind the rewriter | seven-axis mean 88.23 %; +2.52 pt [1.14, 4.01] against base π0.5 (interval from the 40 tasks) | `python3 results/recompute.py`, row `pi05-libero-gpt`; `--pair pi05-libero-gpt pi05-libero`. Prompts: `language/rewriter/table-gpt.json` (sha256 054af642). |
+| On base π0.5, the rewriter against the closed-set mapping | seven-axis mean +0.15 pt [−0.14, 0.45] (interval from the 40 tasks): no difference | `python3 results/recompute.py --pair pi05-libero-gpt pi05-libero-mapped` |
+
+## Where the gain of the closed-set model comes from (Appendix: A closed-set language stage)
 
 | Claim | Value | How to check |
 |---|---|---|

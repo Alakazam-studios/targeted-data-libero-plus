@@ -454,6 +454,32 @@
    "protocol_id": "ee3f0803c23b1ab86ab8f8e76e6e582d6a37d7d1bd8a42eb4524e2a66ef7210e",
    "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; on every case, the Qwen3.5-9B rewrite of the instruction as shipped (language/rewriter/, table sha256 4105210e), the language stage off (mxri-va has none)",
    "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
+  },
+  {
+   "file": "mxri-2-gpt.jsonl.gz",
+   "model": "mxri-2 (run B before its language stage) behind the GPT-6-astra rewriter",
+   "pass_index": 0,
+   "weights_sha256": "6bc90f19f2559e464fb396b07112f34d4f6f3b5e2264ad306ad131b2e7b5092f",
+   "cases": 10030,
+   "rows_sha256_uncompressed": "774264fe8b3be96604f618fa77a34d597c68be7ee9a2c5c08c85433a54fc4a6e",
+   "file_sha256": "7871c9faefd23d6b0d180fe36e9bb712a4a412ff93c2043fb74eca09b5b38f83",
+   "seven_axis_mean_pct": 92.1747,
+   "protocol_id": "ee3f0803c23b1ab86ab8f8e76e6e582d6a37d7d1bd8a42eb4524e2a66ef7210e",
+   "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; on every case, the GPT-6-astra rewrite of the instruction as shipped (language/rewriter/, table sha256 054af642), the language stage off (mxri-2 has none)",
+   "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
+  },
+  {
+   "file": "pi05-libero-gpt.jsonl.gz",
+   "model": "base pi0.5 behind the GPT-6-astra rewriter (the identical-prompt control of the leaderboard system)",
+   "pass_index": 0,
+   "weights_sha256": "8a240bac16cdc5c34168159bee284a40f9cf774bf01bbd0c406d87c43c4bce0b",
+   "cases": 10030,
+   "rows_sha256_uncompressed": "02b5e1bdf9384aa4ee6b9c3b8f04935a4de2c7d949e80c336c429ec029366f9b",
+   "file_sha256": "31263a26b12e781b0bfa375f2670f0d31dce632c37c90d5525ca927c741eacb2",
+   "seven_axis_mean_pct": 88.2272,
+   "protocol_id": "ee3f0803c23b1ab86ab8f8e76e6e582d6a37d7d1bd8a42eb4524e2a66ef7210e",
+   "protocol": "pi0.5 protocol: seed 42, 5 flow steps, 5 actions per query; on every case, the GPT-6-astra rewrite of the instruction as shipped (language/rewriter/, table sha256 054af642), base pi0.5 has no language stage",
+   "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
   }
  ]
 }

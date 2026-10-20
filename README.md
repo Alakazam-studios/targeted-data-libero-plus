@@ -7,7 +7,8 @@ Our main system is the leaderboard system: mxri-va, π0.5 fine-tuned on the LIBE
 clips and a camera stage (no language stage), behind an open test-time rewriter (GPT-6-astra) that rewrites each
 instruction before the policy acts. It scores 93.42 % [93.03, 93.82] seven-axis mean on LIBERO-Plus, the mean of two
 passes, with its 95 % interval over the 10,030 cases; +7.71 [5.82, 9.75] points over base pi0.5, with its interval from
-the 40 tasks. The rewriter's prompt holds the word list and phrase templates of the
+the 40 tasks. On identical prompts (base pi0.5 behind the same rewriter, 88.23 %), our training adds +5.19 [3.77, 6.75]
+points. The rewriter's prompt holds the word list and phrase templates of the
 40 training instructions, but neither the 40 task instructions nor a mapping onto them.
 
 The main weights are those of mxri-va: https://huggingface.co/alakazamworld/pi05-libero-plus-targeted (under the Gemma
@@ -18,8 +19,8 @@ This repository lets you check every score in the paper and re-run its method pa
 
 - `CLAIMS.md`: every number of the paper, with the public evidence for it or a note that it is an internal record.
 - `results/`: the outcome of every LIBERO-Plus case (10,030 cases, one trial each) for each evaluation pass that the
-  paper reports, 34 passes of 29 weight files (two of them run base π0.5 with changed prompts, and three run mxri-va
-  behind a rewriter). Every score and paired difference in the paper follows from these files; the intervals from the
+  paper reports, 36 passes of 29 weight files (two of them run base π0.5 with changed prompts, three run mxri-va
+  behind a rewriter, and two run base π0.5 and mxri-2 behind the GPT rewriter). Every score and paired difference in the paper follows from these files; the intervals from the
   40 tasks are an internal record (see `CLAIMS.md`).
 - `camera-render/`: the camera re-render generator: the camera sampler, the camera transform that matches the
   benchmark's camera code, and the render driver.
