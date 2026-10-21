@@ -8,7 +8,9 @@ clips and a camera stage (no language stage), behind an open test-time rewriter 
 instruction before the policy acts. It scores 93.42 % [93.03, 93.82] seven-axis mean on LIBERO-Plus, the mean of two
 passes, with its 95 % interval over the 10,030 cases; +7.71 [5.82, 9.75] points over base pi0.5, with its interval from
 the 40 tasks. On identical prompts (base pi0.5 behind the same rewriter, 88.23 %), our training adds +5.19 [3.77, 6.75]
-points. The rewriter's prompt holds the word list and phrase templates of the
+points. A memorization probe suggests that GPT-6-astra saw some of the language test instructions, but the
+instructions it recalls add at most 0.05 points to the score; with the open-weight Qwen3.5-9B, which the probe does
+not flag, the same policy scores 92.91 % (`CLAIMS.md`, rows 75 and 76). The rewriter's prompt holds the word list and phrase templates of the
 40 training instructions, but neither the 40 task instructions nor a mapping onto them.
 
 The main weights are those of mxri-va: https://huggingface.co/alakazamworld/pi05-libero-plus-targeted (under the Gemma
