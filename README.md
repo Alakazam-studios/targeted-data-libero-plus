@@ -1,7 +1,8 @@
 # Find the Missing Skill, Build the Data: Targeted Data Sets for π0.5 on LIBERO-Plus
 
 Code and per-case results for the paper of that title. Paper: [`paper/paper.pdf`](paper/paper.pdf) (the current
-version; the arXiv submission is in moderation, link to follow).
+version; the arXiv submission, submit/8211168, has been on hold in moderation since 13 October 2026, link to
+follow).
 
 Our main system is the leaderboard system: mxri-va, π0.5 fine-tuned on the LIBERO-Plus demonstrations, our recovery
 clips and a camera stage (no language stage), behind an open test-time rewriter (GPT-6-astra) that rewrites each
