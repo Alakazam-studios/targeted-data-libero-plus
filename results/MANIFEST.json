@@ -118,6 +118,21 @@
    "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
   },
   {
+   "file": "main-model-vla-eval.jsonl.gz",
+   "model": "mxri-lg-va-1, the closed-set model, scored with the AllenAI evaluator (vla-eval)",
+   "pass_index": 0,
+   "weights_sha256": "826a7e1dba6cc5feff8ba19a29aac2a45a42398bf7f24e58b68b78f96f614caf",
+   "source_weights_sha256": "f32a5737d9240a9c8a6eebae668ebe02401037daaa504a45fe1cc2e3812b51f2",
+   "weights_note": "the served weights 826a7e1d are our serving export of the released mxri-lg-va-1 weights (f32a5737, the weights of main-model), as the evaluation receipt records",
+   "cases": 10030,
+   "rows_sha256_uncompressed": "9ecb132d0cae84f61f33792a9817c57f75fc89e909ccf9e8cac130d534f32fe1",
+   "file_sha256": "96da6b727f990f04c2e24bd993860ca65cf7b86d0f57fa7ab8dc0955cd5bc52e",
+   "seven_axis_mean_pct": 93.6237,
+   "protocol_id": "vla-eval@6cc3e1bd9fc4bed26fb0a3aabd342c5fed11ca09",
+   "protocol": "AllenAI vla-evaluation-harness at commit 6cc3e1bd, configs/benchmarks/libero_plus/all.yaml, env seed 7, 1 trial per case; 5 flow steps, 5 actions per query, the instruction decoded by the model's own language model (decoder e67d86e2); one declared change: the gripper snap to -1/+1 removed (inert in robosuite 1.4.0)",
+   "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
+  },
+  {
    "file": "main-model-noviews.jsonl.gz",
    "model": "mxri-lg-va-1 without the views",
    "pass_index": 0,

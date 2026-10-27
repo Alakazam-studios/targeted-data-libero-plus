@@ -21,8 +21,9 @@ This repository lets you check every score in the paper and re-run its method pa
 
 - `CLAIMS.md`: every number of the paper, with the public evidence for it or a note that it is an internal record.
 - `results/`: the outcome of every LIBERO-Plus case (10,030 cases, one trial each) for each evaluation pass that the
-  paper reports, 36 passes of 29 weight files (two of them run base π0.5 with changed prompts, three run mxri-va
-  behind a rewriter, and two run base π0.5 and mxri-2 behind the GPT rewriter). Every score and paired difference in the paper follows from these files; the intervals from the
+  paper reports, 37 passes of 30 weight files (two of them run base π0.5 with changed prompts, three run mxri-va
+  behind a rewriter, two run base π0.5 and mxri-2 behind the GPT rewriter, and one runs mxri-lg-va-1 with the AllenAI
+  evaluator). Every score and paired difference in the paper follows from these files; the intervals from the
   40 tasks are an internal record (see `CLAIMS.md`).
 - `camera-render/`: the camera re-render generator: the camera sampler, the camera transform that matches the
   benchmark's camera code, and the render driver.
