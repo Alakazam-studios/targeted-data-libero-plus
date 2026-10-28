@@ -133,6 +133,21 @@
    "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
   },
   {
+   "file": "mxri-va-gpt-vla-eval.jsonl.gz",
+   "model": "mxri-va behind the GPT-6-astra rewriter (the leaderboard system), scored with the AllenAI evaluator (vla-eval)",
+   "pass_index": 0,
+   "weights_sha256": "d8c96d6497d6cd9e5a260c2f97ca6305a85189ffa8f367df146e10e05c034b01",
+   "source_weights_sha256": "6ac6926ecea3350f0dbabdee6f4041a766123d2039770383c00c3172e9d2d8cb",
+   "weights_note": "the served weights d8c96d64 are our serving export of the released mxri-va weights (6ac6926e, the weights of mxri-va-gpt-pass0 and pass1), as the evaluation receipt records",
+   "cases": 10030,
+   "rows_sha256_uncompressed": "ff8f5291bf11c023b4990a1540a8bb650055bc24dd3605c8b08650c7865880cb",
+   "file_sha256": "478b5ad4fde0661bb642f85d0329662ef1f63ec55b3174442403f6052cc96185",
+   "seven_axis_mean_pct": 93.2873,
+   "protocol_id": "vla-eval@6cc3e1bd9fc4bed26fb0a3aabd342c5fed11ca09",
+   "protocol": "AllenAI vla-evaluation-harness at commit 6cc3e1bd, configs/benchmarks/libero_plus/all.yaml, env seed 7, 1 trial per case; 5 flow steps, 5 actions per query; each case's instruction replaced by its own entry of language/rewriter/table-gpt.json (sha256 054af642), with no language-model call at evaluation; one declared change: the gripper snap to -1/+1 removed (inert in robosuite 1.4.0)",
+   "source": "internal record (available on request): the evaluation receipt these rows were cut from, checked against these rows' sha256 and 7 axis rates before release"
+  },
+  {
    "file": "main-model-noviews.jsonl.gz",
    "model": "mxri-lg-va-1 without the views",
    "pass_index": 0,
